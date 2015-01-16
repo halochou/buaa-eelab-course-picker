@@ -1,0 +1,39 @@
+<template name="header">
+  <!-- masthead -->
+  <div class="ui masthead segment blue-round-gradient">
+    <div class="ui page grid">
+      <div class="column">
+
+        <div class="ui menu">
+          <a class="header item" href="/"><i class="icon block layout"></i>BUAA</a>
+          <a class="item menu-details {{isActive}}" href="/picker/" data-content="Picker"><i class="icon browser"></i></a>
+          <div class="right menu">
+            {{#if currentUser}}
+            <a class="item menu-details" href="/admin"><i class="icon tasks"></i></a>
+            <a class="item menu-details logout"><i class="icon sign out"></i>Logout</a>
+            {{else}}
+            <a class="item menu-details {{isActive}}" href="/login/" data-content="Login"><i class="icon sign in"></i>Login</a>
+            {{/if}}
+<!--             <div class="item">
+              <div class="ui transparent mini icon input">
+                <input type="text" placeholder="Search..." class="menu-search">
+                <i class="search link icon"></i>
+              </div>
+            </div> -->
+
+            <!-- <a class="mobile item pagebar" href="#"><i class="icon content"></i></a> -->
+            <!-- <a class="item pagebar" href="#"><i class="icon content"></i></a> -->
+          </div>
+        </div>
+
+
+        <!-- information -->
+        <div class="ui information">
+          <h2 class="slim-header-light">Course Picker</h2>
+        </div> 
+        <!-- /information -->
+      </div>
+    </div>
+  </div>
+  <!-- /masthead -->
+</template>

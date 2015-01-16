@@ -1,0 +1,109 @@
+<template name="picker">
+
+
+  <div class="ui vertical page">
+    <div class="ui centered page grid" id="metrics-list">
+
+      <div class="row">
+        <div class="column">
+
+          <div class="ui form">
+            <div class="field">
+              <div class="ui right action input fluid">
+                <input type="text" placeholder="Filter course" class="search">
+                <div class="ui right mini icon button sort" data-sort="category">
+                  <i class="icon search"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- .column -->
+      </div> <!-- .row -->
+
+
+<!--       <div class="row">
+        <div class="column">
+
+          <div class="ui fluid six item labeled icon menu">
+            <a class="item active filter-all">
+              <i class="dashboard icon"></i>
+              All Metrics
+            </a>
+            <a class="item filter-reusability">
+              <i class="retweet icon"></i>
+              Reusability
+            </a>
+            <a class="item filter-learnability">
+              <i class="student icon"></i>
+              Learnability
+            </a>
+            <a class="item filter-usability">
+              <i class="lab icon"></i>
+              Usability
+            </a>
+            <a class="item filter-performance">
+              <i class="star icon"></i>
+              Performance
+            </a>
+            <a class="item filter-reliability">
+              <i class="life ring icon"></i>
+              Reliability
+            </a>
+          </div>
+
+        </div> 
+      </div>  -->
+      <div class="row">
+        <div class="column">
+          <table class="ui striped table">
+            <thead>
+              <tr>
+                <th class="four wide">Course</th>
+                <th class="seven wide">Tutor</th>
+                <th class="five wide">Status</th>
+                <th class="five wide">Action</th>
+              </tr>
+            </thead>
+            <tbody class="list">
+              {{#each courses}}
+              <tr>
+                <td><a class="ui label">{{title}}</a></td>
+                <td class="title">{{tutor}}</td>
+                <td>
+                  <div class="ui small progress" data-percent={{currentCount}}>
+                    <div class="bar"></div>
+                    <div class="label">{{currentCount}} / {{maxCount}}</div>
+                  </div>
+                </td>
+                <td class="center aligned">
+                  {{#if currentUser}}
+                  <button data-id="{{_id}}" class="ui small statistic indicating progress button enroll">
+                      Enroll
+                  </button>
+                  {{/if}}
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div> <!-- /row -->
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<!-- Cannot make async calls for jQuery or Semantic. Breaks Cards, Page Bar, others. -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.5.0/semantic.min.js"></script>
+ -->
+
+
+
+</template>
