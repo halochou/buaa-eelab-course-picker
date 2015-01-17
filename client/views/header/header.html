@@ -5,12 +5,16 @@
       <div class="column">
 
         <div class="ui menu">
-          <a class="header item" href="/"><i class="icon block layout"></i>BUAA EE Experimental Center</a>
-          <a class="item menu-details {{isActive}}" href="/picker/" data-content="Picker"><i class="icon browser"></i></a>
+
+          <a class="header item" href="/"><i class="icon block layout"></i>BUAA EE EC</a>
+          <a class="item menu-details {{isActive}}" href="/picker/" data-content="Picker"><i class="icon browser"></i>Course Picking</a>
           
           <div class="right menu">
             {{#if currentUser}}
             <a class="item menu-details" href="/admin"><i class="icon tasks"></i></a>
+
+            <a class="item menu-details userAccount" href="/userAccount"><i class="icon user"></i>{{currentUser.username}}</a>
+            
             <a class="item menu-details logout"><i class="icon sign out"></i>Logout</a>
             {{else}}
             <a class="item menu-details {{isActive}}" href="/login/" data-content="Login"><i class="icon sign in"></i>Login</a>
@@ -29,9 +33,9 @@
 
 
         <!-- information -->
-        <div class="ui information">
+        <!-- <div class="ui information">
           <h2 class="slim-header-light">Course Picker</h2>
-        </div> 
+        </div>  -->
         <!-- /information -->
       </div>
     </div>

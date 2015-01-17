@@ -1,4 +1,4 @@
 Router.route('/', function () {
-  this.render('picker');
+  this.render('home');
   SEO.set({ title: 'Home -' + Meteor.App.NAME });
 });
