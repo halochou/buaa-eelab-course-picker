@@ -1,6 +1,4 @@
 Router.route('/login', function () {
   this.render('login');
-});
-Router.route('/picker', function () {
-  this.render('picker');
+  SEO.set({ title: 'Login -' + Meteor.App.NAME });
 });

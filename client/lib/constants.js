@@ -5,6 +5,6 @@ if (Meteor.App) {
 }
 
 Meteor.App = {
-  NAME: 'Meteor Boilerplate',
-  DESCRIPTION: 'A boilerplate for meteorjs projects http://matteodem.github.io/meteor-boilerplate/'
+  NAME: 'Buaa Experimental Center Courses Management System',
+  DESCRIPTION: 'Buaa Experimental Center Courses Management System developed by Halochou and geng.legion'
 };
