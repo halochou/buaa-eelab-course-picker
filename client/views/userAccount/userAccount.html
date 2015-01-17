@@ -5,22 +5,19 @@
       <div class="row">
         <h2 class="slim-header-light">Account</h2>
       </div>
-      
-      <div class="row">
-        <div class="column">
 
-          <div class="ui form">
-            <div class="field">
-              <!-- <div class="ui right action input fluid">
-                <input type="text" placeholder="Filter course" class="search">
-                <div class="ui right mini icon button sort" data-sort="category">
-                  <i class="icon search"></i>
-                </div>
-              </div> -->
-            </div>
-          </div>
+      {{# if currentUser}}      
+	      <div class="row">
+	        <div class="column">
+	          <div class="ui form">
+	            <div class="field">   
+	            </div>
+	          </div>
 
-        </div> <!-- .column -->
-      </div> <!-- .row -->
+	        </div> <!-- .column -->
+	      </div> <!-- .row -->
+	  {{else}}
+	  <h3 class="information centered">You have not logged.</h3>
+      {{/if}}
 </div>
 </template>
