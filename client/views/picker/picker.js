@@ -3,20 +3,20 @@ Template['picker'].helpers({
         return courses.find().fetch();
     },
     'currentCount': function(){
-        return 10;
+        return this.members.length;
     },
-    'maxCount': function(){
-        targetId = $(evt.currentTarget).data("id");
-        return courses.findOne({_id: targetId}).maxCount;
-    }
+    'currentCountRate': function(){
+        var currentcountrate;
+        currentcountrate = (this.members.length * 100.0 / this.maxCount);
+        return currentcountrate;
+    }   
 });
 
 Template['picker'].events({
     'click .enroll': function(evt,tpl) {
-
-        targetId = $(evt.currentTarget).data("id");
+        // targetId = $(evt.currentTarget).data("id");
         courses.update({
-            _id: targetId
+            _id: this._id
         }, {
             $push: {'members': Meteor.userId()}
         });
